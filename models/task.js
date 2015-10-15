@@ -6,4 +6,4 @@ var Task = new TaskSchema({
   complete: Boolean
 });
 
-module.exports.model = mongoose.model("Task", Task);
+module.exports.model = mongoose.model("dailiesTask", Task);

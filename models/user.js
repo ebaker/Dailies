@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 var UserSchema = mongoose.Schema;
 var User = new UserSchema({
-  phonenumber: String,
+  email: String,
   //TODO: task array
   complete: Boolean
 });
 
-module.exports.model = mongoose.model("User", User);
+module.exports.model = mongoose.model("dailiesUser", User);
