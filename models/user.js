@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var UserSchema = mongoose.Schema;
 var User = new UserSchema({
-  email: String,
+  phone: String,
   //TODO: task array
   complete: Boolean
 });
