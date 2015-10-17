@@ -13,6 +13,14 @@ $ open 'http;//localhost:3000'
 $ curl localhost:3000/api/v0.1/users | jq .
 ```
 
+# Grunt build (WIP)
+```sh
+$ npm install -g gulp
+$ npm install
+$ gulp build
+$ ./bin/www
+```
+
 ## CURL API
 
 ### GET USERS (ALL)
