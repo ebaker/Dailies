@@ -19,7 +19,7 @@ var App = React.createClass({
       <div>
         <h1>App</h1>
         <div className='subtitle'>app subtitle idk</div>
-        <Container props={names} />
+        <Container names={names} />
       </div>
     );
   }
@@ -37,3 +37,5 @@ var Container = React.createClass({
     return <ul className='names'>{nameItems}</ul>;
   }
 });
+
+React.render(<App />, document.body);
