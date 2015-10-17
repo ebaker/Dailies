@@ -29,8 +29,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', routes);
+// app.use('/', routes); // user compiled build instead
+app.use(express.static(__dirname + '/build'));
 app.use('/api/v0.1', api);
 
 // catch 404 and forward to error handler
