@@ -1,6 +1,5 @@
 var express = require('express');
 var User = require('../models/user.js');
-var tasks = require('./tasks');
 
 var router = express.Router();
 
@@ -35,7 +34,7 @@ function readUsers(req, res){
 function readUser(req, res){
 	User.model.find({phone:req.params.phone}, function(err, user){
 		if(err) res.send({status:400, data:null, message:err});
-		else res.send({status:200, data:user, message:req.body.phone+" Fetched"})
+		else res.send({status:200, data:user, message:user.phone+" Fetched"})
 	});
 }
 
@@ -77,8 +76,6 @@ router.get('/users/:phone', readUser);
 router.put('/users', updateUser);
 router.delete('/users', deleteUsers);
 router.delete('/users/:phone', deleteUser);
-router.all('/users/:phone/tasks/:id?', tasks);
-
 
 
 module.exports = router;
